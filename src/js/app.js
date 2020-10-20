@@ -36,3 +36,45 @@ const news = [
  */
 
  console.log('js loaded!')
+
+ // EX01
+ document.querySelector('#ex01').innerHTML = 'done'
+
+ // EX02
+ document.querySelector('.ex02').className = 'red'
+
+ // EX03
+ document.querySelector('blockquote').innerHTML = 'When you focus on the good, the good gets better.'
+
+ // EX04
+ const ul = document.querySelector('#shopping-list')
+ let newLi = document.createElement('li')
+ newLi.innerHTML = 'Milk'
+
+ ul.appendChild(newLi)
+
+ // EX05
+
+
+ // EX06
+ let clickCounter = 0
+  
+ window.addEventListener("click", function(){
+    document.getElementById('click-counter').innerHTML = clickCounter++;
+ })
+
+
+ // EX07
+ let button = document.querySelector('button');
+
+ button.addEventListener('click', function(){
+     button.disabled = true;
+ })
+
+ // EX08
+ document.querySelector('#link-to-svt').setAttribute('href','javascript:void(0)')
+
+ // EX09
+
+
+

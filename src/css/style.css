@@ -1,3 +1,9 @@
 .red {
     color: red
 }
+
+#news article:nth-of-type(odd){background: #e4e4e4;}
+
+.newsMargin{margin: 1rem;}
+.italic{font-style: italic;}
+.articlePadding{padding: 0.5rem 2rem;}

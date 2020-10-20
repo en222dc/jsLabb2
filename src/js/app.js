@@ -54,7 +54,48 @@ const news = [
  ul.appendChild(newLi)
 
  // EX05
+ 
+ createNewsFeed();
 
+ 
+ function createNewsFeed(){
+     
+    const newsContainer = document.querySelector('#news')
+     
+    let firstHeadline = document.createElement('h1')
+    firstHeadline.innerHTML = 'Nyheter'
+
+    newsContainer.appendChild(firstHeadline)
+
+     for (let key in news) {
+        
+        let article = document.createElement('article')
+
+        let secondHeadline = document.createElement('h2')
+        secondHeadline.innerHTML = news[key].headline
+
+        let authorPara = document.createElement('p')
+        authorPara.innerHTML = news[key].author
+
+        let hLink = document.createElement('a')
+        hLink.setAttribute('href', news[key].href)
+        hLink.append('Gå till nyheten ', '"', news[key].headline, '"')
+
+        let summaryBlock = document.createElement('blockquote')
+        summaryBlock.innerHTML = news[key].summary
+
+        newsContainer.appendChild(article)
+        article.appendChild(secondHeadline)
+        article.appendChild(authorPara)
+        article.appendChild(hLink)
+        article.appendChild(summaryBlock)
+
+        newsContainer.className = 'newsMargin'
+        article.className = 'articlePadding'
+        authorPara.className = 'italic'
+     }
+ }
+ 
 
  // EX06
  let clickCounter = 0
@@ -62,7 +103,6 @@ const news = [
  window.addEventListener("click", function(){
     document.getElementById('click-counter').innerHTML = clickCounter++;
  })
-
 
  // EX07
  let button = document.querySelector('button');
@@ -75,6 +115,6 @@ const news = [
  document.querySelector('#link-to-svt').setAttribute('href','javascript:void(0)')
 
  // EX09
-
+document.querySelector('img').src = 'https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
 
 
